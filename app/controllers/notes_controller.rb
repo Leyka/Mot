@@ -6,11 +6,17 @@ class NotesController < ApplicationController
   end
 
   def new 
-    @note = Note.new
+    @note = current_user.notes.build 
   end
 
   def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.build note_params
+
+    if @note.save
+      redirect_to @note
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -29,6 +35,6 @@ class NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:title, :body)
+    params.require(:note).permit(:title, :body, :user_id)
   end
 end
