@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_note, only: [:update, :edit, :show]
 
   def index
