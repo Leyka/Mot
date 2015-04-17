@@ -6,9 +6,11 @@ class NotesController < ApplicationController
   end
 
   def new 
+    @note = Note.new
   end
 
   def create
+    @note = Note.new(note_params)
   end
 
   def edit
