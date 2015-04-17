@@ -3,6 +3,7 @@ class NotesController < ApplicationController
   before_action :set_note, only: [:update, :edit, :show]
 
   def index
+    @notes = current_user.notes
   end
 
   def new 
@@ -13,7 +14,7 @@ class NotesController < ApplicationController
     @note = current_user.notes.build note_params
 
     if @note.save
-      redirect_to @note
+      redirect_to @note, notice: "Note has been created"
     else
       render 'new'
     end
@@ -23,6 +24,11 @@ class NotesController < ApplicationController
   end
 
   def update
+    if @note.update(note_params)
+      redirect_to @note, notice: "Note has benn updated"
+    else
+      render 'edit'
+    end
   end
 
   def show
