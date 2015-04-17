@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# default 
 gem 'rails', '4.2.0'
 gem 'mysql2'
 gem 'sass-rails', '~> 5.0'
@@ -9,10 +10,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'slim-rails'
-gem 'github-markdown'
+# front-end 
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'vuejs-rails'
+
+# back-end
+gem 'slim-rails'
+gem 'github-markdown'
 gem 'devise'
 
 
