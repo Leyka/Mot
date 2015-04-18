@@ -13,7 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # front-end 
 gem 'simple_form'
 gem 'bootstrap-sass'
-gem 'vuejs-rails'
+gem "font-awesome-rails"
+gem 'rails-bootstrap-markdown'
 
 # back-end
 gem 'slim-rails'

@@ -1,4 +1,6 @@
 = simple_form_for @note do |f|
-  = f.input :title
-  = f.input :body, label: 'Content'
-  = f.button :submit
+  = f.input :title, placeholder: 'Title of your note'
+  = f.input :body, label: 'Markdown', input_html: { data: {provide: 'markdown', iconlibrary: 'fa'} }
+  = f.button :submit 
+  
+

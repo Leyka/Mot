@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require vue
-//= require marked
+//= require bootstrap-markdown
+//= require bootstrap-markdown-bundle
 //= require turbolinks
 //= require_tree .
