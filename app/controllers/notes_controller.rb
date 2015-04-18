@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   before_filter :authenticate_user!
-  before_action :set_note, only: [:update, :edit, :show]
+  before_action :set_note, only: [:update, :edit, :show, :destroy]
 
   def index
     @notes = current_user.notes
@@ -33,6 +33,11 @@ class NotesController < ApplicationController
 
   def show
     @html = markdown.render @note.body
+  end
+
+  def destroy
+    @note.destroy
+    redirect_to notes_path
   end
 
   private

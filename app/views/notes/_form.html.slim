@@ -2,5 +2,7 @@
   = f.input :title, placeholder: 'Title of your note'
   = f.input :body, label: 'Markdown', input_html: { data: {provide: 'markdown', iconlibrary: 'fa'} }
   = f.button :submit 
+
+= link_to "All notes", notes_path
   
 

@@ -1,2 +1,6 @@
 h1 = @note.title 
 pre = raw @html
+
+= link_to "All notes", notes_path
+= link_to "Edit", edit_note_path
+= link_to "Delete", note_path, method: :delete, data: {confirm: "Are you sure?"}
