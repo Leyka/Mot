@@ -15,5 +15,6 @@
 //= require bootstrap-sprockets
 //= require bootstrap-markdown
 //= require bootstrap-markdown-bundle
+//= require highlight
 //= require turbolinks
 //= require_tree .
