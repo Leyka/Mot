@@ -32,12 +32,17 @@ class NotesController < ApplicationController
   end
 
   def show
+    @html = markdown.render @note.body
   end
 
   private
 
   def set_note
     @note = Note.find(params[:id])
+  end
+
+  def markdown
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
   end
 
   def note_params

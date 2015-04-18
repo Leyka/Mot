@@ -18,7 +18,7 @@ gem 'rails-bootstrap-markdown'
 
 # back-end
 gem 'slim-rails'
-gem 'github-markdown'
+gem 'redcarpet'
 gem 'devise'
 
 
