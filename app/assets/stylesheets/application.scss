@@ -18,4 +18,9 @@
 @import "bootstrap";
 @import "bootstrap-markdown";
 @import "font-awesome";
+@import "theme";
 @import "highlight-railscasts"; 
+
+#logo {
+  font-family: 'Pacifico', cursive;
+}
